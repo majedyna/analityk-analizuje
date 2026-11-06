@@ -1,0 +1,73 @@
+PROMPTY: Raport w Power BI samymi promptami (Analityk Analizuje)
+Start: ogrod_start.pbix zapisany jako projekt PBIP.
+Wszystkie prompty wpisuj w JEDNEJ rozmowie. Raport budujesz kawałek po kawałku.
+Szczegóły: Instrukcja_odc2.pdf
+
+============================================================
+PROMPT 0 - POŁĄCZENIE  [Power BI otwarty, folder projektu dodany do rozmowy]
+============================================================
+Połącz się z otwartym plikiem Power BI ogrod_raport i wypisz tabele z liczbą wierszy. Sprawdź też, czy widzisz pliki projektu w dodanym folderze. Na razie niczego nie zmieniaj.
+
+Powinno wyjść: sales 22 492 wiersze, products 51, customers 10 829, bez relacji.
+
+============================================================
+PROMPT 1 - MODEL I DWA KALENDARZE  [Power BI otwarty]
+============================================================
+Zbuduj model gwiazdy z tych trzech tabel. Dodaj dwa kalendarze: „Kalendarz” z hierarchią kwartał → miesiąc → tydzień → dzień tygodnia, bez roku, i „Kalendarz porównawczy” z nieaktywną relacją do daty zamówienia.
+
+============================================================
+PROMPT 2 - MIARY  [Power BI otwarty]
+============================================================
+Dodaj miary: liczba zamówień, sprzedaż netto, marża i marża %. Do każdej porównanie przez nieaktywną relację i zmianę: w procentach ze strzałką ▲/▼, a dla marży % w p.p. Porównanie tylko z drugiego kalendarza, bez wartości domyślnych.
+Pod karty KPI dodaj od razu: wartość jako tekst (karta skraca liczby do tysięcy), tekst „vs …” z porównania i kolor zmiany. Do tego parametr pola do wyboru miary i tekst z oboma zakresami dat.
+
+============================================================
+PROMPT 3 - PORZĄDKI W MODELU  [Power BI otwarty]
+============================================================
+Uporządkuj model: foldery miar, krótkie opisy, ukryte klucze i wyłączone sumowanie kolumn, których nie powinno się sumować. Wypisz, co zmieniłeś.
+
+>>> TY: Ctrl+S w Power BI. Od teraz: przed promptem zapisz, po zmianach AI zamknij Power BI BEZ ZAPISYWANIA i otwórz projekt ponownie.
+
+============================================================
+PROMPT 4 - PRZEGLĄD: NAGŁÓWEK, FRAGMENTATORY, KARTY KPI  [AI edytuje pliki]
+============================================================
+Zrób stronę „Przegląd” 1920 × 1080. Nie widzisz raportu, więc po każdym kroku powiem ci, co wyszło. Na razie góra: po lewej tytuł „Raport sprzedaży”, po prawej dwa fragmentatory dat, co najmniej 84 px wysokości, bez suwaka.
+Pod spodem 4 osobne karty KPI, ok. 140 px wysokości, każda z jedną miarą: nazwa, duża pogrubiona wartość, pod nią szare „vs …”, a niżej zmiana w kolorze. Bez podtytułu, bez linii podziału i bez tytułów przy „vs” i zmianie – jeśli wyłączenie w pliku nie zadziała, ukryj je białym kolorem. Zaokrąglone rogi i cień. Czcionki Segoe UI zapisz tak jak w motywie projektu.
+
+>>> TY: zamknij bez zapisywania, otwórz ponownie. Ustaw okres 01.09-30.09.2026 i porównanie 01.09-30.09.2025. Sprawdź karty.
+
+============================================================
+PROMPT 5 - PRZEGLĄD: WYKRES Z WYBOREM MIARY  [AI edytuje pliki]
+============================================================
+Pod kartami wykres trendu na całą szerokość, ok. 360 px wysokości. Na osi cała hierarchia kalendarza, start na tygodniach, bez tytułów osi. W legendzie rok: bieżący ciemnoniebieski z etykietami danych, poprzedni jaśniejszy, 2024 szary. Miarę wybieram przyciskami w jednym rzędzie w nagłówku wykresu, domyślnie sprzedaż netto, a tytuł wykresu to wybrana miara + „ – dynamika wyników sprzedażowych”. Parametr wstaw na oś tak, jak zapisuje go Power BI, nie jak zwykłą kolumnę. Wykres nie reaguje na fragmentatory dat.
+
+>>> TY: zamknij bez zapisywania, otwórz ponownie. Kliknij przyciski miar, drąż wykres, zmień okres - wykres ma stać.
+
+============================================================
+PROMPT 6 - PRZEGLĄD: TABELA WOJEWÓDZTW  [AI edytuje pliki]
+============================================================
+Pod wykresem, do dołu strony, tabela województw na całą szerokość. Dla każdej miary porównanie na szaro, bieżący okres na jasnoniebieskim tle i zmiana w kolorze, bez nagłówka. Wartości i sumy wyśrodkowane, sortowanie po sprzedaży, reszta wierszy po przewinięciu w pionie – bez przewijania w poziomie. W podtytule oba zakresy dat.
+
+>>> TY: zamknij bez zapisywania, otwórz ponownie. Sprawdź kolory w tabeli.
+
+============================================================
+PROMPT 7 - STRONA PRODUKTY  [AI edytuje pliki]
+============================================================
+Dodaj stronę „Produkty” w tym samym stylu: nagłówek i fragmentatory jak na „Przegląd”, zsynchronizowane, plus fragmentator kategorii. Trzy wykresy słupkowe: top 10 produktów według marży, 10 z najniższą marżą % i marża % według kategorii. Pod nimi dwie tabele jak województwa: kategorie i produkty, bez przewijania w poziomie.
+
+>>> TY: zamknij bez zapisywania, otwórz ponownie. Sprawdź stronę Produkty.
+
+============================================================
+PROMPT 8 - ŁADNIEJSZY TYTUŁ (na deser)  [AI edytuje pliki]
+============================================================
+Popraw tytuł raportu. Zrób jakiś ładniejszy.
+
+>>> TY: zamknij bez zapisywania, otwórz ponownie.
+
+============================================================
+PROMPT 9 - POPRAWKI (tylko gdy coś nie pasuje)  [AI edytuje pliki]
+============================================================
+[Napisz krótko, co nie pasuje, albo wklej błąd.] Popraw to w plikach i daj znać, kiedy mogę ponownie otworzyć projekt.
+
+>>> TY: gdy wszystko jest OK: Ctrl+S w Power BI.
+
